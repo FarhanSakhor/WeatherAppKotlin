@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/background_gradient">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/main">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="80dp"
+            android:id="@+id/upperContainer">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/cityContainer"
+                >
+
+                <TextView
+                    android:id="@+id/city"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="30dp"
+                    android:textColor="#EDE8E8"
+                    android:textAlignment="center"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/conditionContainer"
+                android:layout_below="@+id/cityContainer"
+                >
+
+                <TextView
+                    android:id="@+id/condition"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="40dp"
+                    android:textColor="#EDE8E8"
+                    android:textAlignment="center"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/temperatureContainer"
+                android:layout_below="@+id/conditionContainer"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/temperature"
+                    android:text=""
+                    android:textSize="110dp"
+                    android:textStyle="bold"
+                    android:textColor="#EDE8E8"
+                    android:textAlignment="center"/>
+            </LinearLayout>
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/upperContainer"
+            android:padding="5sp">
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:text=""
+                android:textSize="30dp"
+                android:textColor="#EDE8E8"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:padding="30dp"
+                android:id="@+id/humidity"/>
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:text=""
+                android:textSize="30dp"
+                android:textColor="#EDE8E8"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:padding="30dp"
+                android:id="@+id/pressure"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/loader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="An error occured!"
+        android:id="@+id/errorText"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+</RelativeLayout>
