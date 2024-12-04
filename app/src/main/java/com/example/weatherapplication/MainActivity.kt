@@ -43,8 +43,6 @@ class MainActivity : ComponentActivity() {
         pressureText= findViewById<TextView>(R.id.pressure)
 
         getWeather()
-
-
     }
 
 
